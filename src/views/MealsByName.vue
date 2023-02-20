@@ -1,4 +1,6 @@
-<template>Menu List</template>
+<template>
+  <div>search by name</div>
+</template>
 
 <script>
 export default {};

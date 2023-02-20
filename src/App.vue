@@ -9,7 +9,7 @@
       </router-link>
       <div class="flex items-center gap-1">
         <router-link
-          to="/"
+          :to="{ name: 'byName' }"
           class="
             px-2
             inline-flex
@@ -22,7 +22,7 @@
           Search Meals
         </router-link>
         <router-link
-          to="/"
+          :to="{ name: 'byLetter' }"
           class="
             px-2
             inline-flex
@@ -35,7 +35,7 @@
           Search by name
         </router-link>
         <router-link
-          to="/"
+          :to="{ name: 'byIngredients' }"
           class="
             px-2
             inline-flex
