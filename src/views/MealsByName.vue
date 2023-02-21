@@ -23,7 +23,7 @@ import { ref } from 'vue';
 import store from '../store';
 
   const keyword = ref('');
-  const meals = computed(()=> store.state.searchedMeals)
+  const meals = computed(()=> store.state.searchMeals)
 
   function searchMeals(){
    store.dispatch('searchMeals', keyword.value)
