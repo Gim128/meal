@@ -22,7 +22,7 @@
         <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur animi quam pariatur dolores molestias odit veritatis provident assumenda corporis itaque magni suscipit, ipsa id! Error doloribus itaque nam aspernatur quia.</p>
 
         <div class="p-3 flex items-center justify-between">
-          <a :href="meal.strMeal" target="_blank"
+          <a :href="meal.strYoutube" target="_blank"
           class="px-3 py-2 rounded border-2 text-white border-red-600 bg-red-500 hover:bg-red-600 transition-colors">
             YouTube
           </a>
@@ -51,6 +51,9 @@ import store from '../store';
 
   onMounted(() => {
     keyword.value = route.params.name
+    if(keyword.value){
+      searchMeals();
+    }
   })
 
 </script>
