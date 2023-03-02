@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8">
+  <div class="p-8 pb-0">
     <input
         type="text"
         v-model="keyword"
@@ -12,7 +12,7 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
     <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow rounded-xl">
 
-      <router-link to="/">
+      <router-link :to="{name: 'mealDeatils', params: {id: meal.idMeal}}">
         <img :src="meal.strMealThumb" :alt="strMeal" class="rounded-t-xl w-full h-48 object-cover">
       </router-link>
       
@@ -53,6 +53,7 @@ import store from '../store';
     keyword.value = route.params.name
     if(keyword.value){
       searchMeals();
+      // 1:24
     }
   })
 
